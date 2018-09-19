@@ -1,14 +1,14 @@
-💎 EOS Tracker
+💎 AGR Tracker
 ========================
 
-EOS Tracker is a Frontend based on Angular4 that connects to [EOS Tracker API](https://github.com/EOSEssentials/EOSTracker-API).
+AGR Tracker is a Frontend based on Angular4 that connects to [AGR Tracker API](https://github.com/AGREssentials/AGRTracker-API).
 
 📌 Getting Started
 ------------
 
 ```bash
-$ git clone git@github.com:EOSEssentials/EOSTracker.git
-$ cd EOSTracker
+$ git clone git@github.com:aggregion/AGRTracker.git
+$ cd AGRTracker
 $ npm install
 ```
 

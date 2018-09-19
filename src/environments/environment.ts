@@ -9,6 +9,6 @@ export const environment = {
   votingUrl: 'https://eosportal.io',
   appName: 'EOS Tracker',
   logoUrl: '/assets/logo.png',
-  blockchainUrl: 'https://eos.greymass.com',
-  chainId: 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906'
+  blockchainUrl: 'https://mainnet-amzn1.blockchain.aggregion.com/',
+  chainId: '41c4c54a375c767f11654a907541633bdddf158a8f0c394f657980bc484c91c9'
 };
