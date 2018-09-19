@@ -4,7 +4,7 @@ import { EosService } from './eos.service';
 import { Observable, Subject, timer, from, forkJoin, of } from 'rxjs';
 import { map, filter, share, withLatestFrom, switchMap, catchError, take } from 'rxjs/operators';
 
-const EOS_QUOTE = 60000;
+const AGR_QUOTE = 60000;
 const RAM_QUOTE = 60000;
 const GET_INFO_INTERVAL = 5000;
 
@@ -69,8 +69,8 @@ export class AppService {
       }),
       share()
     );
-    this.eosQuote$ = timer(0, EOS_QUOTE).pipe(
-      switchMap(() => this.getEOSTicker()),
+    this.eosQuote$ = timer(0, AGR_QUOTE).pipe(
+      switchMap(() => this.getAGRTicker()),
       filter(ticker => !!ticker.data),
       map(ticker => ticker.data),
       share()
@@ -78,15 +78,15 @@ export class AppService {
     this.ramQuote$ = timer(0, RAM_QUOTE).pipe(
       switchMap(() => from(this.eosService.eos.getTableRows({
         json: true,
-        code: "eosio",
-        scope: "eosio",
+        code: "agrio",
+        scope: "agrio",
         table: "rammarket"
       }))),
       filter((data: any) => data.rows && data.rows.length),
       map(data => data.rows[0]),
       map(data => {
         const base = Number(data.base.balance.replace('RAM', ''));
-        const quote = Number(data.quote.balance.replace('EOS', ''));
+        const quote = Number(data.quote.balance.replace('AGR', ''));
         return {
           ...data,
           price: quote / base
@@ -128,7 +128,7 @@ export class AppService {
     return this.http.get<any[]>(`https://raw.githubusercontent.com/eoscafe/eos-airdrops/master/tokens.json`);
   }
 
-  getEOSTicker(): Observable<CMCTicker> {
+  getAGRTicker(): Observable<CMCTicker> {
     return this.http.get<CMCTicker>('https://api.coinmarketcap.com/v2/ticker/1765/');
   }
 
