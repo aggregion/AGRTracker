@@ -1,5 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { environment } from '../../../../environments/environment';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -10,8 +9,6 @@ export class HeaderComponent implements OnInit {
 
   @Output() onMenuToggle = new EventEmitter();
 
-  logoUrl = environment.logoUrl;
-  appName = environment.appName;
   searchExpanded = false;
 
   constructor() { }

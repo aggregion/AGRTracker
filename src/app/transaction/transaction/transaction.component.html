@@ -1,8 +1,8 @@
-<mat-toolbar color="primary">
+<!-- <mat-toolbar color="primary">
   <h1 class="mat-headline">
     {{ 'Transaction' | translate }}
   </h1>
-</mat-toolbar>
+</mat-toolbar> -->
 <ng-container *ngIf="transaction$ | async as transaction; else loading">
   <mat-tab-group color="primary" dynamicHeight="true" *ngIf="!transaction.isError; else error">
     <mat-tab>

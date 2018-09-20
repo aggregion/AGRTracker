@@ -1,8 +1,8 @@
-<mat-toolbar color="primary">
+<!-- <mat-toolbar color="primary">
   <h1 class="mat-headline">
     {{ 'Account' | translate }} {{name$ | async}}
   </h1>
-</mat-toolbar>
+</mat-toolbar> -->
 <ng-container *ngIf="account$ | async as account; else loading">
   <ng-container *ngIf="!account.isError; else error">
     <app-account-information [account]="account.value" [eosQuote]="app.eosQuote$ | async" [ramQuote]="app.ramQuote$ | async"></app-account-information>
