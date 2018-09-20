@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  walletUrl: 'https://walleteos.com',
+  walletUrl: 'https://www.aggregion.com/agr/',
   votingUrl: 'https://eosportal.io',
   appName: 'AGR Tracker',
   logoUrl: '/assets/logo.png',

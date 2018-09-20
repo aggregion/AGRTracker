@@ -1,8 +1,8 @@
-<!-- <mat-toolbar color="primary">
+<mat-toolbar color="primary">
   <h1 class="mat-headline">
     {{ 'Search' | translate }} "{{query$ | async}}"
   </h1>
-</mat-toolbar> -->
+</mat-toolbar>
 <div style="margin:20px;" *ngIf="result$ | async; else loading">
   <p class="mat-subheading-2">No Result Found!</p>
   <p class="mat-body-1">Here are the supported search queries.</p>

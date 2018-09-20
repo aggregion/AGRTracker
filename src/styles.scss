@@ -45,9 +45,17 @@ a {
 }
 
 .mat-progress-bar.mat-accent .mat-progress-bar-buffer {
+  background-color: #58E0D7;
+}
+.mat-progress-bar.mat-accent .mat-progress-bar-fill::after {
   background-color: #18a199;
 }
 
 .mat-progress-spinner.mat-accent circle {
   stroke: #f68c1e;
+}
+
+.mat-toolbar.mat-primary {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
 }

@@ -1,8 +1,8 @@
-<!-- <mat-toolbar color="primary">
+<mat-toolbar color="primary">
   <h1 class="mat-headline">
     {{ 'Block' | translate }} #{{id$ | async}}
   </h1>
-</mat-toolbar> -->
+</mat-toolbar>
 <ng-container *ngIf="block$ | async as block; else loading">
   <mat-tab-group color="primary" dynamicHeight="true" *ngIf="!block.isError; else error">
     <mat-tab>
