@@ -1,3 +1,8 @@
-.mat-list-item.active {
-    background-color: #f5f5f5;
+.mat-list-item.active,
+.mat-list-item:hover {
+    background-color: #fee8d2;
+}
+
+.mat-list-item .mat-list-icon {
+  color: #f68c1e;
 }

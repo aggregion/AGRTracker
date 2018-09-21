@@ -1,10 +1,13 @@
-<app-header class="mat-elevation-z4" (onMenuToggle)="sidenav.toggle()"></app-header>
 <mat-sidenav-container>
-  <mat-sidenav #sidenav [mode]="sidenavMode$ | async" [opened]="sidenavOpen$ | async" autoFocus="false" fixedInViewport="true"
-    fixedTopGap="50" class="mat-elevation-z4">
+  <mat-sidenav #sidenav [mode]="sidenavMode$ | async" [opened]="sidenavOpen$ | async" autoFocus="false"
+               fixedInViewport="true" class="mat-elevation-z4" fxLayout="column">
+    <a class="logo-container" routerLink="/">
+      <img [src]="logoUrl" id="logo" alt="Aggregion">
+    </a>
     <app-sidenav></app-sidenav>
   </mat-sidenav>
-  <mat-sidenav-content fxLayout="column">
+  <mat-sidenav-content>
+    <app-header class="mat-elevation-z4" [style.left]="sidenav.opened ? '230px' : 0" (onMenuToggle)="sidenav.toggle()"></app-header>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

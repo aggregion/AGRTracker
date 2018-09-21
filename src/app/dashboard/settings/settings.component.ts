@@ -62,8 +62,5 @@ export const LANGUAGES = [
 ];
 
 export const APIS = [
-  { name: 'AGR Dublin', endpoint: 'https://api1.eosdublin.io' },
-  { name: 'AGR New York', endpoint: 'http://api.eosnewyork.io' },
-  { name: 'Greymass', endpoint: 'https://eos.greymass.com' },
-  { name: 'Cypherglass', endpoint: 'http://api.cypherglass.com' }
-]
+  { name: 'Aggregion Node 1', endpoint: 'https://mainnet-node1.blockchain.aggregion.com/' },
+];

@@ -125,7 +125,7 @@ export class AppService {
   }
 
   getTokens(): Observable<any[]> {
-    return this.http.get<any[]>(`https://raw.githubusercontent.com/eoscafe/eos-airdrops/master/tokens.json`);
+    return this.http.get<any[]>(`https://raw.githubusercontent.com/aggregion/agr/master/tokens.json`);
   }
 
   getAGRTicker(): Observable<CMCTicker> {
